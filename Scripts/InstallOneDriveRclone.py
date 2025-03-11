@@ -31,7 +31,13 @@ subprocess.run(["winget", "install", "-e", "--id", "Rclone.Rclone", "--accept-so
 
 # Run rclone authorize command, result will be access & refresh token
 print("\nOneDrive authorizeren met Rclone (Browser wordt geopend)...")
-result = subprocess.run(["rclone", "authorize", "onedrive"], capture_output=True, text=True)
+# result = subprocess.run(["rclone", "authorize", "onedrive"], capture_output=True, text=True)
+try:    
+    result = subprocess.run(["rclone", "authorize", "onedrive"], capture_output=True, text=True)
+except FileNotFoundError:
+    # Restart script as admin
+    ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+    sys.exit()
 
 # Extract JSON from output data using regex
 match = re.search(r'(\{.*\})', result.stdout, re.DOTALL)
