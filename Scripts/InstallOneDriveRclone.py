@@ -32,8 +32,10 @@ subprocess.run(["winget", "install", "-e", "--id", "Rclone.Rclone", "--accept-so
 # Check if rclone is added to PATH, if not restart the program
 if not shutil.which("rclone"):
     print("Rclone is niet toegevoegd aan PATH, herstart het programma om verder te gaan")
-    # Restart this program
-    os.execl(sys.executable, sys.executable, *sys.argv)
+    # Restart this program in a new shell to update the PATH in the shell
+    subprocess.Popen([sys.executable] + sys.argv)
+    sys.exit()
+
 
 
 # Run rclone authorize command, result will be access & refresh token
