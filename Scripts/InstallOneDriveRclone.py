@@ -23,11 +23,11 @@ if not is_admin():
 
 # Download winfsp with winget
 print("\nWinFSP downloaden...")
-subprocess.run(["winget", "install", "-e", "--id", "WinFsp.WinFsp"])
+subprocess.run(["winget", "install", "-e", "--id", "WinFsp.WinFsp", "--accept-source-agreements", "--accept-package-agreements"])
 
 # Download rclone with winget
 print("\nRclone downloaden...")
-subprocess.run(["winget", "install", "-e", "--id", "Rclone.Rclone"])
+subprocess.run(["winget", "install", "-e", "--id", "Rclone.Rclone", "--accept-source-agreements", "--accept-package-agreements"])
 
 # Run rclone authorize command, result will be access & refresh token
 print("\nOneDrive authorizeren met Rclone (Browser wordt geopend)...")
