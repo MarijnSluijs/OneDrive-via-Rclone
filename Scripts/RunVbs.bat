@@ -1,2 +1,2 @@
 @echo off
-start "" "C:\Users\sluij\OneDrive\Documents\Projects\easy-rclone\Scripts\MountOneDrive.vbs"
+start "" "C:\Users\sluij\OneDrive\Documents\Projects\OneDrive via Rclone\Scripts\MountOneDrive.vbs"
