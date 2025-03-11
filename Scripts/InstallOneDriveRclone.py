@@ -33,7 +33,7 @@ subprocess.run(["winget", "install", "-e", "--id", "Rclone.Rclone", "--accept-so
 if not shutil.which("rclone"):
     print("Rclone is niet toegevoegd aan PATH, herstart het programma om verder te gaan")
     # Restart this program in a new shell to update the PATH in the shell
-    subprocess.Popen([sys.executable] + sys.argv)
+    subprocess.Popen([sys.executable] + sys.argv, creationflags=subprocess.CREATE_NEW_CONSOLE)
     sys.exit()
 
 
