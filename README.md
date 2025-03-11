@@ -3,6 +3,7 @@
 
 ## OneDrive via Rclone installeren
 1. Download de bestanden via deze link: [OneDrive via Rclone](https://github.com/MarijnSluijs/OneDrive-via-Rclone/archive/refs/heads/main.zip).
+2. Unzip het gedownloade bestand naar een gewenste locatie.
 3. Ga naar de folder **OneDrive-via-Rclone-main**. Dubbelklik het bestand **InstallRclone.exe** in de folder **InstallRclone** om Rclone te installeren. Indien Windows zegt dat het een onbekende app is, klik dan op **Meer informatie** en dan op **Toch uitvoeren**.
 4. Dubbelklik het bestand **ConfigureOneDrive.exe** in de folder **ConfigureOneDrive** om OneDrive te verbinden met Rclone. Er zal nu twee keer worden gevraagd om in te loggen met OneDrive, en om de locatie waar *OneDrive via Rclone* moet worden geinstalleerd.
 5. Als de installatie voltooid is, moet uw computer herstart worden om *OneDrive via Rclone* te starten. Er zal nu op de locatie die in de vorige stap is gekozen een map genaamd **OneDriveRclone** worden gemaakt. Hier kunt u uw OneDrive bestanden vinden.
